@@ -10,6 +10,7 @@ TagManager:
   - Purple
   - ColorChanger
   - Star
+  - BoxCollider
   layers:
   - Default
   - TransparentFX

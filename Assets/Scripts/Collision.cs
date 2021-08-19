@@ -50,7 +50,7 @@ public class Collision : MonoBehaviour
 			Destroy(col.gameObject);
 			return;
 		}
-		if (col.tag != curColor)
+		if (col.tag != curColor || col.tag == "BoxCollider")
 		{
 			Debug.Log("Die effect, restart game...");
             Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);

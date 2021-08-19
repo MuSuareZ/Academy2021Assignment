@@ -113,14 +113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c1664e783d4854abcf921d93b5d82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newList: []
-  score: 0
-  scoreUI: {fileID: 0}
-  sr: {fileID: 2187424515833992503}
   blue: {r: 0, g: 0, b: 1, a: 1}
   green: {r: 0, g: 1, b: 0, a: 1}
   red: {r: 1, g: 0, b: 0, a: 1}
   purple: {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
+  scoreUI: {fileID: 0}
+  sr: {fileID: 2187424515833992503}
+  playerDeathParticle: {fileID: 294540363837302882, guid: a50a861cc6f7aa048adac63bdfc78f0e, type: 3}
 --- !u!50 &2187424515833992521
 Rigidbody2D:
   serializedVersion: 4
