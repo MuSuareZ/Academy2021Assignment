@@ -11,6 +11,7 @@ public class Collision : MonoBehaviour
 	private static string curColor;
 	private int score = 0;
 
+	public bool isGameOver = false;
 	public Color blue;
 	public Color green;
 	public Color red;
@@ -52,8 +53,8 @@ public class Collision : MonoBehaviour
 		}
 		if (col.tag != curColor || col.tag == "BoxCollider")
 		{
-			Debug.Log("Die effect, restart game...");
-            Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);
+			isGameOver = true;
+			Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);
 			sr.color = Color.clear;
 			Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
 			CircleCollider2D collider = gameObject.GetComponent<CircleCollider2D>();

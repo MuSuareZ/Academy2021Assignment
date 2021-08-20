@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2187424515833992503}
   - component: {fileID: 2187424515833992520}
   - component: {fileID: 2187424515833992500}
+  - component: {fileID: 4873567475248153210}
   - component: {fileID: 2187424515833992521}
   - component: {fileID: 2187424515833992501}
   m_Layer: 0
@@ -120,6 +121,18 @@ MonoBehaviour:
   scoreUI: {fileID: 0}
   sr: {fileID: 2187424515833992503}
   playerDeathParticle: {fileID: 294540363837302882, guid: a50a861cc6f7aa048adac63bdfc78f0e, type: 3}
+--- !u!114 &4873567475248153210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2187424515833992522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6ef0f595b7e594eaf5c32d597db7da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &2187424515833992521
 Rigidbody2D:
   serializedVersion: 4

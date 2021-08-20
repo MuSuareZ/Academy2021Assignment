@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\ParticleActivation.cs" />
+    <Compile Include="Assets\Scripts\ActivateRestartButton.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

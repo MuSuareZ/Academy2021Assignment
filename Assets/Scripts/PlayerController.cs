@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-
     public Rigidbody2D rb;
 
     void Start()
