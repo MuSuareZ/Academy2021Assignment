@@ -17,8 +17,9 @@ public class Collision : MonoBehaviour
 	public Color red;
 	public Color purple;
 	public TextMeshProUGUI scoreUI;
-	public SpriteRenderer sr;
+	public SpriteRenderer playerSprite;
 	public GameObject playerDeathParticle;
+	public GameObject obstacleSpawner;
 
 	void Start()
 	{
@@ -42,6 +43,7 @@ public class Collision : MonoBehaviour
 	{
 		if (col.tag == "Star")
 		{
+			obstacleSpawner.GetComponent<SpawnObstacle>().Spawn((int)col.gameObject.transform.position.y);
 			score += 1;
 			return;
 		}
@@ -55,7 +57,7 @@ public class Collision : MonoBehaviour
 		{
 			isGameOver = true;
 			Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);
-			sr.color = Color.clear;
+			playerSprite.color = Color.clear;
 			Rigidbody2D rigidbody = gameObject.GetComponent<Rigidbody2D>();
 			CircleCollider2D collider = gameObject.GetComponent<CircleCollider2D>();
 			rigidbody.constraints = RigidbodyConstraints2D.FreezePositionY;
@@ -73,6 +75,6 @@ public class Collision : MonoBehaviour
 	{
 		int colorNum = _random.Next(colors.Count);
 		curColor = colors[colorNum];
-		sr.color = colorByColorName[curColor];
+		playerSprite.color = colorByColorName[curColor];
 	}
 }

@@ -14,7 +14,6 @@ public class ActivateRestartButton : MonoBehaviour
         button.gameObject.SetActive(false);
     }
 
-
     void Update()
     {
         col = player.GetComponent<Collision>();
@@ -26,7 +25,7 @@ public class ActivateRestartButton : MonoBehaviour
 
     IEnumerator ButtonDelay()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         button.gameObject.SetActive(true);
     }
 }
