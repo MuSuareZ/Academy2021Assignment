@@ -10,7 +10,11 @@ public class Collision : MonoBehaviour
 	private static List<string> colorsList;
 	private static string curColor;
 	private int score = 0;
+	private AudioSource audioSource;
 
+	public AudioClip starCollectSound;
+	public AudioClip playerDeathSound;
+	public AudioClip colorSwitchSound;
 	public bool isGameOver = false;
 	public Color blue;
 	public Color green;
@@ -23,7 +27,8 @@ public class Collision : MonoBehaviour
 
 	void Start()
 	{
-        colorByColorName = new Dictionary<string, Color>
+		audioSource = GetComponent<AudioSource>();
+		colorByColorName = new Dictionary<string, Color>
         {
             { "Blue", blue },
 			{ "Green", green },
@@ -43,18 +48,21 @@ public class Collision : MonoBehaviour
 	{
 		if (col.tag == "Star")
 		{
+			audioSource.PlayOneShot(starCollectSound);
 			obstacleSpawner.GetComponent<SpawnObstacle>().Spawn((int)col.gameObject.transform.position.y);
 			score += 1;
 			return;
 		}
 		if (col.tag == "ColorChanger")
 		{
+			audioSource.PlayOneShot(colorSwitchSound);
 			SetNewPlayerColor();
 			Destroy(col.gameObject);
 			return;
 		}
 		if (col.tag != curColor || col.tag == "BoxCollider")
 		{
+			audioSource.PlayOneShot(playerDeathSound);
 			isGameOver = true;
 			Instantiate(playerDeathParticle, gameObject.transform.position, Quaternion.identity);
 			playerSprite.color = Color.clear;
