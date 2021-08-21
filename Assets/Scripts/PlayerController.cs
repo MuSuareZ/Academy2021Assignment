@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !gameObject.GetComponent<Collision>().isGameOver)
         {
             rb.gravityScale = 3;
             audioSource.PlayOneShot(playerMovementSound);

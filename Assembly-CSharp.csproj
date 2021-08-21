@@ -61,13 +61,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActivateRestartButton.cs" />
     <Compile Include="Assets\Scripts\ParticleActivation.cs" />
+    <Compile Include="Assets\Scripts\DestroySpawned.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\SpawnObstacle.cs" />
-    <Compile Include="Assets\Scripts\DestroySpawned.cs" />
+    <Compile Include="Assets\Scripts\Restart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
