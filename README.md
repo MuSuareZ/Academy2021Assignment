@@ -1,10 +1,20 @@
-# Academy2021Assignment
+# Next Games Academy 2021 - Assignment
+
+### Main Goal
+- Create a clone of Color Switch by David Reichelt, a world-wide known game with more than 200 million downloads. All the art was provided so that I could focus mainly in coding and designing the project while following certain restrictions and rules set by Next Games.
+
+### How to test?
+- Make sure to have Unity3D installed (version 2021.1.17f1)
+- Clone this repository or download it as a ZIP
+- Open the cloned/extracted project through Unity3D
+- Load the scene called GameScene
+- You can play the game through the Editor (as demanded the assignment).
 
 ### My Implementation Approach
 
 #### Camera and Player Movement
 - The player movement had a simple approach since its X value is constrained, having only one axis to focus on. By pressing the mouse left button, a certain velocity is applied to the player's ball while having a gravity force always pulling its body downwards (opposite direction).
-- While the player can go upwards and downwards, the camera's movement is only able to go upwards. The camera follows the player's movement, if the player's Y position is bigger than the camera's Y position, therefore only going upwards.
+- While the player can move upwards and downwards, the camera's movement is only able to go upwards. The camera follows the player's movement if the player's Y position is bigger than the camera's Y position.
 
 #### Color Switching and Collisions 
 - Color switching was probably the most tricky part of this assignment due to the restriction of never selecting a new color that was equal to the player's current color. At first, my approach was on using shuffling methods but after a few tries, I managed to accomplish this task by using a generic collection (Dictionary(string)(color)) to store the color tags and the player's sprite renderer color. When setting an initial color, a simple method was called to sort a random color from this collection and assigned to the player. When setting a new color after each collision on a color switch, a temporary list is created while ignoring the player's current color to make sure the same color would never be selected and then from this list a new random color is selected and assigned to the player.
@@ -12,7 +22,7 @@
 to validate a possible collision or not while always saving the current player's color and comparing both.
 
 #### Obstacle's Spawner and Destruction
-- The obstacle's spawner is a gameObject present in the scene that receives a list of all prefab obstacles, sorts a random value from 0 to the amount of prefabs on the list and takes this value to instantiate a random prefab and a color switch at a position outside the player view range. While the player progresses through the scene, new obstacles are generated. That gives the player the feeling of an infinite game.
+- The obstacle's spawner is a GameObject present in the scene that receives a list of all prefab obstacles, sorts a random value from 0 to the amount of prefabs on the list and takes this value to instantiate a random prefab and a color switch at a position outside the player view range. While the player progresses through the scene, new obstacles are generated. That gives the player the feeling of an infinite game.
 - Attached to the camera are two box colliders, in which one is responsible for triggering the player defeat in case its Y position reaches the camera bottom side and the other is responsible for destroying already crossed obstacle's to avoid generating so many data and eventually affecting the game's performance.
 
 #### HUD and UI
