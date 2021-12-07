@@ -1,5 +1,7 @@
 # Next Games Academy 2021 - Assignment
 
+https://user-images.githubusercontent.com/37344727/145080166-13bcabc9-fc74-413f-abbc-87c3048a3936.mp4
+
 ### Main Goal
 - Create a clone of Color Switch by David Reichelt, a world-wide known game with more than 200 million downloads. All the art was provided so that I could focus mainly in coding and designing the project while following certain restrictions and rules set by Next Games.
 
